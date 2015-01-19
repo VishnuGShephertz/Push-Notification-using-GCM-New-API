@@ -1,12 +1,9 @@
 # Push-Notification-using-GCM-New-API
 ==========================
-
 # About Application
-
 1. This application shows how can we integrate PushNotification using App42 Android SDK in Android application.
 2. Here We are using new Google Cloud Messaging API provided by Google as we know old one are depricated.
 3. How we can send PushNotification using App42 PushNotification API.
-
 
 # Running Sample
 This is a Android sample app made by using App42 API. It uses PushNotification API of App42 platform.
@@ -53,12 +50,116 @@ __Initializing App42API to send PushNotification :__ To Send PushNotification us
 
 ```
 
+__Check for GooglePlayService Availability :__ To Use Google Cloud Messaging API, first we need to check for google play service availability, This code is written in App42GCMController.
+ 
+```
+	public static boolean isPlayServiceAvailable(Activity activity) {
+		int resultCode = GooglePlayServicesUtil
+				.isGooglePlayServicesAvailable(activity);
+		if (resultCode != ConnectionResult.SUCCESS) {
+			if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+				GooglePlayServicesUtil.getErrorDialog(resultCode, activity,
+						PlayServiceResolutionRequest).show();
+			} else {
+				Log.i(Tag, "This device is not supported.");
+			}
+			return false;
+		}
+		return true;
+	}
 
+```
 
+__Get Registration Id:__ For Push Notifiction we require GCM Registration Id from Local if save else from Google.
+ 
+```
+	public static void getRegistrationId(Context context,
+			String googleProjectNo, App42GCMListener callBack) {
+		GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(context);
+		String regid = App42GCMController.getRegistrationId(context);
+		if (regid.isEmpty()) {
+			registeronGCM(context, googleProjectNo, gcm, callBack);
+		} else
+			callBack.onGCMRegistrationId(regid);
+	}
 
+```
+__Registartion on GCM:__ If GCM Registartion Id is not saved in local we have to register app on GCM first to get registration Id
+ 
+```
+		public static void registeronGCM(final Context context,
+			final String googleProjectNo, final GoogleCloudMessaging gcm,
+			final App42GCMListener callback) {
+		final Handler callingThreadHandler = new Handler();
+		new Thread() {
+			@Override
+			public void run() {
+				try {
+					final String regid = gcm.register(googleProjectNo);
+					callingThreadHandler.post(new Runnable() {
+						@Override
+						public void run() {
+							if (callback != null) {
+								callback.onGCMRegistrationId(regid);
+							}
+						}
+					});
+				} catch (final Exception ex) {
+					callingThreadHandler.post(new Runnable() {
+						@Override
+						public void run() {
+							if (callback != null) {
+								callback.onError(ex.getMessage());
+							}
+						}
+					});
+				}
+			}
+		}.start();
+	}
 
+```
+__App42 Push Registration :__ Once we get GCM registartion Id we have to store it on AppHQ for App42 PushNotification.
+ 
+```
+public static void registerOnApp42(String userName,String deviceToen,final App42GCMListener callBack){
+		App42API.buildPushNotificationService().storeDeviceToken(userName, deviceToen, new App42CallBack() {
+			@Override
+			public void onSuccess(Object arg0) {
+				App42Response response=(App42Response) arg0;
+				callBack.onRegisterApp42(response.getStrResponse());
+			}
+			
+			@Override
+			public void onException(Exception arg0) {
+				// TODO Auto-generated method stub
+				callBack.onApp42Response(arg0.getMessage());
+			}
+		});
+	}
 
-
+```
+__Send Push Message to user:__ You can also send Push Notification message to user as well those are 
+ 
+```
+public static void sendPushToUser(String userName,String message,final App42GCMListener callBack){
+		App42API.buildPushNotificationService().sendPushMessageToUser(userName, message, new App42CallBack() {
+			
+			@Override
+			public void onSuccess(Object arg0) {
+				// TODO Auto-generated method stub
+				App42Response response=(App42Response) arg0;
+				callBack.onApp42Response(response.getStrResponse());
+			}
+			
+			@Override
+			public void onException(Exception arg0) {
+				// TODO Auto-generated method stub
+				callBack.onApp42Response(arg0.getMessage());
+			}
+		});
+	}
+```
 __Customize PushNotification Message:__ You can also customize your PushNotification message by changing following code in App42GCMService.java file accordingly.
  
 ```
