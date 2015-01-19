@@ -1,5 +1,3 @@
-# Push-Notification-using-GCM-New-API
-==========================
 # About Application
 1. This application shows how can we integrate PushNotification using App42 Android SDK in Android application.
 2. Here We are using new Google Cloud Messaging API provided by Google as we know old one are depricated.
