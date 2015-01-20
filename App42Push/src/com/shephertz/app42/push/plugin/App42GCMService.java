@@ -1,4 +1,4 @@
-package com.example.app42sample;
+package com.shephertz.app42.push.plugin;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -15,6 +15,8 @@ import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.example.app42Sample.MainActivity;
+import com.example.app42sample.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 /**
@@ -28,9 +30,9 @@ public class App42GCMService extends IntentService {
 	public static final int NOTIFICATION_ID = 1;
 	private NotificationManager mNotificationManager;
 	NotificationCompat.Builder builder;
-	static final String EXTRA_MESSAGE = "message";
+	public static final String EXTRA_MESSAGE = "message";
 	static int msgCount = 0;
-	static final String DISPLAY_MESSAGE_ACTION = "com.example.app42sample.DISPLAY_MESSAGE";
+	public static final String DISPLAY_MESSAGE_ACTION = "com.example.app42sample.DISPLAY_MESSAGE";
 
 	public App42GCMService() {
 		super("GcmIntentService");

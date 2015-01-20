@@ -1,4 +1,4 @@
-package com.example.app42sample;
+package com.example.app42Sample;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -10,13 +10,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.example.app42sample.App42GCMController.App42GCMListener;
+import com.example.app42sample.R;
 import com.shephertz.app42.paas.sdk.android.App42API;
+import com.shephertz.app42.push.plugin.App42GCMController;
+import com.shephertz.app42.push.plugin.App42GCMService;
+import com.shephertz.app42.push.plugin.App42GCMController.App42GCMListener;
 
 public class MainActivity extends Activity implements App42GCMListener {
 	public static final String EXTRA_MESSAGE = "message";
-	private static final String GoogleProjectNo = "1043599038916";
+	private static final String GoogleProjectNo = "Your Google Project No";
 	private TextView responseTv;
 	private EditText edUserName, edMessage;
 
@@ -29,9 +31,9 @@ public class MainActivity extends Activity implements App42GCMListener {
 		edMessage = ((EditText) findViewById(R.id.message));
 		 App42API.initialize(
 		 this,
-		 "e86da38e4f4363bcbce74c431ca10173bf452e47285893e8d2044bb3913b7153",
-		 "f8fb6584ee2f9cc5b0d46d22cf696e32bd3988e064ae7760b0219e36f46357f3");
-		 App42API.setLoggedInUser("gcmTest") ;
+		 "Your API Key",
+		 "Your Secret Key");
+		 App42API.setLoggedInUser("Your UserName") ;
 	}
 
 	public void onStart() {

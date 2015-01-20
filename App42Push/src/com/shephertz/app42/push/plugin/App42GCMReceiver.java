@@ -1,4 +1,4 @@
-package com.example.app42sample;
+package com.shephertz.app42.push.plugin;
 
 import android.app.Activity;
 import android.content.ComponentName;

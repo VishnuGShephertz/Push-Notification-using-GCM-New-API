@@ -3,7 +3,7 @@
  *     Copyright © 2015 ShepHertz Technologies Pvt Ltd. All rights reserved.
  * -----------------------------------------------------------------------
  */
-package com.example.app42sample;
+package com.shephertz.app42.push.plugin;
 
 /**
  * @author Vishnu Garg
@@ -45,7 +45,6 @@ public class App42GCMController {
 						PlayServiceResolutionRequest).show();
 			} else {
 				Log.i(Tag, "This device is not supported.");
-
 			}
 			return false;
 		}
