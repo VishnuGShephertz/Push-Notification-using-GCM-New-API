@@ -10,11 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.example.app42sample.R;
+
 import com.shephertz.app42.paas.sdk.android.App42API;
 import com.shephertz.app42.push.plugin.App42GCMController;
-import com.shephertz.app42.push.plugin.App42GCMService;
 import com.shephertz.app42.push.plugin.App42GCMController.App42GCMListener;
+import com.shephertz.app42.push.plugin.App42GCMService;
 
 public class MainActivity extends Activity implements App42GCMListener {
 	public static final String EXTRA_MESSAGE = "message";

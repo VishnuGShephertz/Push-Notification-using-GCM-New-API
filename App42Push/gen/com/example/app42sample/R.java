@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.app42sample;
+package com.example.app42Sample;
 
 public final class R {
     public static final class attr {
@@ -649,11 +649,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.example.app42sample:adSize}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSize com.example.app42Sample:adSize}</code></td><td>
     The size of the ad.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes com.example.app42sample:adSizes}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSizes com.example.app42Sample:adSizes}</code></td><td>
     A comma-separated list of the supported ad sizes.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.example.app42sample:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.example.app42Sample:adUnitId}</code></td><td> The ad unit ID.</td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
@@ -679,7 +679,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.app42sample:adSize
+          @attr name com.example.app42Sample:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
@@ -699,7 +699,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.app42sample:adSizes
+          @attr name com.example.app42Sample:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
@@ -715,7 +715,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.app42sample:adUnitId
+          @attr name com.example.app42Sample:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /**  Attributes for LoadingImageView 
@@ -724,12 +724,12 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop com.example.app42sample:circleCrop}</code></td><td>
+           <tr><td><code>{@link #LoadingImageView_circleCrop com.example.app42Sample:circleCrop}</code></td><td>
         Whether or not this view should have a circular clip applied
         </td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.example.app42sample:imageAspectRatio}</code></td><td>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.example.app42Sample:imageAspectRatio}</code></td><td>
         The fixed aspect ratio to use in aspect ratio adjustments.</td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.example.app42sample:imageAspectRatioAdjust}</code></td><td>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.example.app42Sample:imageAspectRatioAdjust}</code></td><td>
         What kind of aspect ratio adjustment to do.</td></tr>
            </table>
            @see #LoadingImageView_circleCrop
@@ -754,7 +754,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.app42sample:circleCrop
+          @attr name com.example.app42Sample:circleCrop
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
@@ -772,7 +772,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.app42sample:imageAspectRatio
+          @attr name com.example.app42Sample:imageAspectRatio
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
@@ -795,7 +795,7 @@ containing a value of this type.
 <tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:imageAspectRatioAdjust
+          @attr name com.example.app42Sample:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
         /** Attributes that can be used with a MapAttrs.
@@ -804,22 +804,22 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.example.app42sample:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.example.app42sample:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.example.app42sample:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.example.app42sample:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.example.app42sample:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_liteMode com.example.app42sample:liteMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.example.app42sample:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.example.app42sample:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.example.app42sample:uiMapToolbar}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.example.app42sample:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.example.app42sample:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.example.app42sample:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.example.app42sample:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.example.app42sample:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.example.app42sample:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.example.app42sample:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.example.app42Sample:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.example.app42Sample:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.example.app42Sample:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.example.app42Sample:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.example.app42Sample:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_liteMode com.example.app42Sample:liteMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.example.app42Sample:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.example.app42Sample:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.example.app42Sample:uiMapToolbar}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.example.app42Sample:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.example.app42Sample:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.example.app42Sample:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.example.app42Sample:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.example.app42Sample:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.example.app42Sample:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.example.app42Sample:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -845,7 +845,7 @@ containing a value of this type.
             0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -855,11 +855,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:cameraBearing
+          @attr name com.example.app42Sample:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -869,11 +869,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:cameraTargetLat
+          @attr name com.example.app42Sample:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -883,11 +883,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:cameraTargetLng
+          @attr name com.example.app42Sample:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -897,11 +897,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:cameraTilt
+          @attr name com.example.app42Sample:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -911,11 +911,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:cameraZoom
+          @attr name com.example.app42Sample:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -925,11 +925,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:liteMode
+          @attr name com.example.app42Sample:liteMode
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -945,11 +945,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.example.app42sample:mapType
+          @attr name com.example.app42Sample:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -959,11 +959,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiCompass
+          @attr name com.example.app42Sample:uiCompass
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -973,11 +973,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiMapToolbar
+          @attr name com.example.app42Sample:uiMapToolbar
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -987,11 +987,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiRotateGestures
+          @attr name com.example.app42Sample:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -1001,11 +1001,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiScrollGestures
+          @attr name com.example.app42Sample:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -1015,11 +1015,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiTiltGestures
+          @attr name com.example.app42Sample:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -1029,11 +1029,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiZoomControls
+          @attr name com.example.app42Sample:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -1043,11 +1043,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:uiZoomGestures
+          @attr name com.example.app42Sample:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -1057,11 +1057,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:useViewLifecycle
+          @attr name com.example.app42Sample:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.example.app42sample.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.example.app42Sample.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -1071,7 +1071,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.app42sample:zOrderOnTop
+          @attr name com.example.app42Sample:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 14;
         /**  Attributes for the WalletFragment &lt;fragment&gt; tag 
@@ -1080,10 +1080,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_appTheme com.example.app42sample:appTheme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment com.example.app42sample:environment}</code></td><td> Google Wallet environment to use </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.example.app42sample:fragmentMode}</code></td><td> Fragment mode </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.example.app42sample:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_appTheme com.example.app42Sample:appTheme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment com.example.app42Sample:environment}</code></td><td> Google Wallet environment to use </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.example.app42Sample:fragmentMode}</code></td><td> Fragment mode </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.example.app42Sample:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
            </table>
            @see #WalletFragmentOptions_appTheme
            @see #WalletFragmentOptions_environment
@@ -1109,7 +1109,7 @@ containing a value of this type.
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:appTheme
+          @attr name com.example.app42Sample:appTheme
         */
         public static final int WalletFragmentOptions_appTheme = 0;
         /**
@@ -1129,7 +1129,7 @@ containing a value of this type.
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:environment
+          @attr name com.example.app42Sample:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
@@ -1148,7 +1148,7 @@ containing a value of this type.
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:fragmentMode
+          @attr name com.example.app42Sample:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
@@ -1160,7 +1160,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.app42sample:fragmentStyle
+          @attr name com.example.app42Sample:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /**  Attributes that may be specified in a style resource to customize the look and feel of
@@ -1170,17 +1170,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.example.app42sample:buyButtonAppearance}</code></td><td> The appearance of the buy button </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.example.app42sample:buyButtonHeight}</code></td><td> Height of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.example.app42sample:buyButtonText}</code></td><td> The text on the buy button </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.example.app42sample:buyButtonWidth}</code></td><td> Width of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.example.app42sample:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.example.app42sample:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.example.app42sample:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.example.app42sample:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.example.app42sample:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.example.app42sample:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.example.app42sample:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.example.app42Sample:buyButtonAppearance}</code></td><td> The appearance of the buy button </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.example.app42Sample:buyButtonHeight}</code></td><td> Height of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.example.app42Sample:buyButtonText}</code></td><td> The text on the buy button </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.example.app42Sample:buyButtonWidth}</code></td><td> Width of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.example.app42Sample:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.example.app42Sample:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.example.app42Sample:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.example.app42Sample:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.example.app42Sample:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.example.app42Sample:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.example.app42Sample:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -1216,7 +1216,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:buyButtonAppearance
+          @attr name com.example.app42Sample:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
@@ -1245,7 +1245,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:buyButtonHeight
+          @attr name com.example.app42Sample:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
@@ -1266,7 +1266,7 @@ containing a value of this type.
 <tr><td><code>donate_with_google</code></td><td>4</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:buyButtonText
+          @attr name com.example.app42Sample:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
@@ -1295,7 +1295,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:buyButtonWidth
+          @attr name com.example.app42Sample:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
@@ -1309,7 +1309,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsBackground
+          @attr name com.example.app42Sample:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
@@ -1323,7 +1323,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsButtonBackground
+          @attr name com.example.app42Sample:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
@@ -1335,7 +1335,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsButtonTextAppearance
+          @attr name com.example.app42Sample:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
@@ -1347,7 +1347,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsHeaderTextAppearance
+          @attr name com.example.app42Sample:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
@@ -1366,7 +1366,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsLogoImageType
+          @attr name com.example.app42Sample:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
@@ -1383,7 +1383,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsLogoTextColor
+          @attr name com.example.app42Sample:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
@@ -1395,7 +1395,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.app42sample:maskedWalletDetailsTextAppearance
+          @attr name com.example.app42Sample:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

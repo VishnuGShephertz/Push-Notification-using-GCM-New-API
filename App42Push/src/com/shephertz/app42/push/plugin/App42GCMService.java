@@ -16,7 +16,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.example.app42Sample.MainActivity;
-import com.example.app42sample.R;
+import com.example.app42Sample.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 /**

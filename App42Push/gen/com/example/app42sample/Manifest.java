@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.app42sample;
+package com.example.app42Sample;
 
 public final class Manifest {
     public static final class permission {
@@ -16,6 +16,6 @@ public final class Manifest {
            where PACKAGE is the application's package name.
     
          */
-        public static final String C2D_MESSAGE="com.example.app42sample.permission.C2D_MESSAGE";
+        public static final String C2D_MESSAGE="com.example.app42Sample.permission.C2D_MESSAGE";
     }
 }
