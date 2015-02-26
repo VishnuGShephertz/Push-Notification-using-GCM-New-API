@@ -27,12 +27,12 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
  * wake lock.
  */
 public class App42GCMService extends IntentService {
-	public static final int NOTIFICATION_ID = 1;
+	public static final int NotificationId = 1;
 	private NotificationManager mNotificationManager;
 	NotificationCompat.Builder builder;
-	public static final String EXTRA_MESSAGE = "message";
+	public static final String ExtraMessage = "message";
 	static int msgCount = 0;
-	public static final String DISPLAY_MESSAGE_ACTION = "com.example.app42sample.DISPLAY_MESSAGE";
+	public static final String DisplayMessageAction = "com.example.app42sample.DisplayMessage";
 
 	public App42GCMService() {
 		super("GcmIntentService");
@@ -109,7 +109,7 @@ public class App42GCMService extends IntentService {
 			notificationIntent = new Intent(this, MainActivity.class);
 		}
 		notificationIntent.putExtra("message_delivered", true);
-		notificationIntent.putExtra(EXTRA_MESSAGE, msg);
+		notificationIntent.putExtra(ExtraMessage, msg);
 
 		// set intent so it does not start a new activity
 		notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -126,7 +126,7 @@ public class App42GCMService extends IntentService {
 				.setDefaults(Notification.DEFAULT_VIBRATE);
 
 		mBuilder.setContentIntent(contentIntent);
-		mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
+		mNotificationManager.notify(NotificationId, mBuilder.build());
 	}
 
 	/**
@@ -140,8 +140,8 @@ public class App42GCMService extends IntentService {
 	 * @param message
 	 */
 	public void broadCastMessage(String message) {
-		Intent intent = new Intent(DISPLAY_MESSAGE_ACTION);
-		intent.putExtra(EXTRA_MESSAGE, message);
+		Intent intent = new Intent(DisplayMessageAction);
+		intent.putExtra(ExtraMessage, message);
 		this.sendBroadcast(intent);
 	}
 

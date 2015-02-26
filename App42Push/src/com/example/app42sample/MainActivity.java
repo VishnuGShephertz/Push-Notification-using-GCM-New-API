@@ -17,7 +17,7 @@ import com.shephertz.app42.push.plugin.App42GCMController.App42GCMListener;
 import com.shephertz.app42.push.plugin.App42GCMService;
 
 public class MainActivity extends Activity implements App42GCMListener {
-	public static final String EXTRA_MESSAGE = "message";
+	
 	private static final String GoogleProjectNo = "Your Google Project No";
 	private TextView responseTv;
 	private EditText edUserName, edMessage;
@@ -103,11 +103,11 @@ public class MainActivity extends Activity implements App42GCMListener {
 	public void onResume() {
 		super.onResume();
 		String message = getIntent().getStringExtra(
-				App42GCMService.EXTRA_MESSAGE);
+				App42GCMService.ExtraMessage);
 		if (message != null)
 			Log.d("MainActivity-onResume", "Message Recieved :" + message);
 		IntentFilter filter = new IntentFilter(
-				App42GCMService.DISPLAY_MESSAGE_ACTION);
+				App42GCMService.DisplayMessageAction);
 		filter.setPriority(2);
 		registerReceiver(mBroadcastReceiver, filter);
 	}
@@ -116,7 +116,7 @@ public class MainActivity extends Activity implements App42GCMListener {
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			String message = intent
-					.getStringExtra(App42GCMService.EXTRA_MESSAGE);
+					.getStringExtra(App42GCMService.ExtraMessage);
 			Log.i("MainActivity-BroadcastReceiver", "Message Recieved " + " : "
 					+ message);
 			responseTv.setText(message);
