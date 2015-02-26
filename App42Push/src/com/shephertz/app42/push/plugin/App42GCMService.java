@@ -76,9 +76,12 @@ public class App42GCMService extends IntentService {
 				}
 				Log.i(TAG, "Completed work @ " + SystemClock.elapsedRealtime());
 				// Post notification of received message.
-				broadCastMessage(extras.toString());
-				sendNotification("Received: " + extras.toString());
 				Log.i(TAG, "Received: " + extras.toString());
+					String message = intent.getExtras().getString("message");
+				Log.i(TAG, "Message: " + message);
+				broadCastMessage(message);
+				sendNotification(message);
+				
 			}
 		}
 		// Release the wake lock provided by the WakefulBroadcastReceiver.
