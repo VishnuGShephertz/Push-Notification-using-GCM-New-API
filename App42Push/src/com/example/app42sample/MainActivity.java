@@ -1,3 +1,8 @@
+/**
+ * -----------------------------------------------------------------------
+ *     Copyright © 2015 ShepHertz Technologies Pvt Ltd. All rights reserved.
+ * -----------------------------------------------------------------------
+ */
 package com.example.app42Sample;
 
 import android.app.Activity;
@@ -12,13 +17,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.shephertz.app42.paas.sdk.android.App42API;
+import com.shephertz.app42.paas.sdk.android.App42Log;
 import com.shephertz.app42.push.plugin.App42GCMController;
 import com.shephertz.app42.push.plugin.App42GCMController.App42GCMListener;
 import com.shephertz.app42.push.plugin.App42GCMService;
-
+/**
+ * @author Vishnu Garg
+ *
+ */
 public class MainActivity extends Activity implements App42GCMListener {
 	
-	private static final String GoogleProjectNo = "Your Google Project No";
+	private static final String GoogleProjectNo = "1043599038916";
 	private TextView responseTv;
 	private EditText edUserName, edMessage;
 
@@ -31,9 +40,10 @@ public class MainActivity extends Activity implements App42GCMListener {
 		edMessage = ((EditText) findViewById(R.id.message));
 		 App42API.initialize(
 		 this,
-		 "Your API Key",
-		 "Your Secret Key");
-		 App42API.setLoggedInUser("Your UserName") ;
+		 "6ee926bcf52d0c373a4a439b1ed479c2a06edc32a4ecae9406eb4fd8a5d10c62",
+		 "184e83bf989ef3807914531f55453877b2b609bfcb71cafdfd44781920ad0883");
+		 App42Log.setDebug(true);
+		 App42API.setLoggedInUser("Vi") ;
 	}
 
 	public void onStart() {

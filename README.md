@@ -188,11 +188,11 @@ So make following changes in your AndroidManifest.xml using this sample's Androi
    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <!-- GCM requires a Google account. -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-
-    <!-- Keeps the processor from sleeping when a message is received. -->
+  
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+	  <!-- Required for Location based Push Notification. -->
+	 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--
      Creates a custom permission so only this app can receive its messages.
 

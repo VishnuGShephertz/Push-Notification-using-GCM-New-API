@@ -7,11 +7,11 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
     <!-- GCM connects to Google Services. -->
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <!-- GCM requires a Google account. -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <!-- Keeps the processor from sleeping when a message is received. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -62,6 +62,9 @@
                 <!-- Receives the registration id. -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
                 <!-- Your package name here -->
+                  <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+               
+                     <!-- Your package name here -->
                 <category android:name="com.example.app42Sample" />
             </intent-filter>
         </receiver>

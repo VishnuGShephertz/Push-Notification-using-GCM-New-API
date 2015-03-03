@@ -23,7 +23,10 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.shephertz.app42.paas.sdk.android.App42API;
 import com.shephertz.app42.paas.sdk.android.App42CallBack;
 import com.shephertz.app42.paas.sdk.android.App42Response;
-
+/**
+ * @author Vishnu Garg
+ *
+ */
 public class App42GCMController {
 	private static final int PlayServiceResolutionRequest = 9000;
 	private static final String Tag = "App42PushNotification";
@@ -32,7 +35,8 @@ public class App42GCMController {
 	private static final String PrefKey = "App42PushSample";
 	private static final String KeyRegisteredOnApp42 = "app42_register";
     
-	/** This function checks for GooglePlay Service availability
+	/** 
+	 * This function checks for GooglePlay Service availability
 	 * @param activity
 	 * @return
 	 */
@@ -51,7 +55,8 @@ public class App42GCMController {
 		return true;
 	}
 
-	/**This function used to get GCM Registration Id from New API
+	/**
+	 * This function used to get GCM Registration Id from New API
 	 * @param context
 	 * @return
 	 */
@@ -85,6 +90,7 @@ public class App42GCMController {
 	}
 
 	/**
+	 * Get AppVersion
 	 * @param context
 	 * @return
 	 */
@@ -100,6 +106,7 @@ public class App42GCMController {
 	}
 
 	/**
+	 * Store registartion Id from GCM in preferences
 	 * @param context
 	 * @param regId
 	 */
@@ -114,6 +121,7 @@ public class App42GCMController {
 	}
 
 	/**
+	 * Validate if registered
 	 * @param context
 	 * @return
 	 */
@@ -131,6 +139,11 @@ public class App42GCMController {
 		editor.commit();
 	}
 
+	/**
+	 * @param context
+	 * @param googleProjectNo
+	 * @param callBack
+	 */
 	@SuppressLint("NewApi")
 	public static void getRegistrationId(Context context,
 			String googleProjectNo, App42GCMListener callBack) {
@@ -142,14 +155,13 @@ public class App42GCMController {
 			callBack.onGCMRegistrationId(regid);
 	}
 
-	/*
-	 * Used to load all Facebook friends
-	 * 
-	 * @param userID FB id of user
-	 * 
-	 * @param accessToken facebook accesstoken
-	 * 
-	 * @param callback instance of class on which we have to return
+	
+	/** 
+	 * Used to register device on GCM
+	 * @param context
+	 * @param googleProjectNo
+	 * @param gcm
+	 * @param callback
 	 */
 	public static void registeronGCM(final Context context,
 			final String googleProjectNo, final GoogleCloudMessaging gcm,
@@ -182,6 +194,12 @@ public class App42GCMController {
 		}.start();
 	}
 
+	/** 
+	 * Send a PushMessage to desired User
+	 * @param userName
+	 * @param message
+	 * @param callBack
+	 */
 	public static void sendPushToUser(String userName,String message,final App42GCMListener callBack){
 		App42API.buildPushNotificationService().sendPushMessageToUser(userName, message, new App42CallBack() {
 			
@@ -199,6 +217,11 @@ public class App42GCMController {
 			}
 		});
 	}
+	/** This function used to register GCM device Token on AppHQ
+	 * @param userName
+	 * @param deviceToen
+	 * @param callBack
+	 */
 	public static void registerOnApp42(String userName,String deviceToen,final App42GCMListener callBack){
 		App42API.buildPushNotificationService().storeDeviceToken(userName, deviceToen, new App42CallBack() {
 			@Override
@@ -214,6 +237,10 @@ public class App42GCMController {
 			}
 		});
 	}
+	/**
+	 * CallBack Listener
+	 *
+	 */
 	public interface App42GCMListener {
 		public void onError(String errorMsg);
 		public void onGCMRegistrationId(String gcmRegId);

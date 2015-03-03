@@ -1,4 +1,12 @@
+/**
+ * -----------------------------------------------------------------------
+ *     Copyright © 2015 ShepHertz Technologies Pvt Ltd. All rights reserved.
+ * -----------------------------------------------------------------------
+ */
 package com.shephertz.app42.push.plugin;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -10,14 +18,17 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Color;
+import android.location.Address;
+import android.location.Location;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 import com.example.app42Sample.MainActivity;
 import com.example.app42Sample.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.shephertz.app42.paas.sdk.android.App42Exception;
+import com.shephertz.app42.paas.sdk.android.App42Log;
+import com.shephertz.app42.push.plugin.App42LocationManager.App42LocationListener;
 
 /**
  * This {@code IntentService} does the actual handling of the GCM message.
@@ -25,67 +36,116 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
  * partial wake lock for this service while the service does its work. When the
  * service is finished, it calls {@code completeWakefulIntent()} to release the
  * wake lock.
+ * @author Vishnu Garg
  */
+
 public class App42GCMService extends IntentService {
-	public static final int NotificationId = 1;
+	private static final int NotificationId = 1;
 	private NotificationManager mNotificationManager;
 	NotificationCompat.Builder builder;
 	public static final String ExtraMessage = "message";
 	static int msgCount = 0;
 	public static final String DisplayMessageAction = "com.example.app42sample.DisplayMessage";
+	private static final String App42GeoTag = "app42_geoBase";
+	private static final String CountryBase = "countryBase";
+	private static final String GeoBase = "geoBase";
+	private static final String KeyApp42Message = "app42_message";
 
 	public App42GCMService() {
 		super("GcmIntentService");
 	}
 
-	public static final String TAG = "GCM Demo";
+	public static final String TAG = "App42 Push Demo";
 
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		Bundle extras = intent.getExtras();
 		GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-		// The getMessageType() intent parameter must be the intent you received
-		// in your BroadcastReceiver.
 		String messageType = gcm.getMessageType(intent);
 		if (!extras.isEmpty()) { // has effect of unparcelling Bundle
-			/*
-			 * Filter messages based on message type. Since it is likely that
-			 * GCM will be extended in the future with new message types, just
-			 * ignore any message types you're not interested in, or that you
-			 * don't recognize.
-			 */
 			if (GoogleCloudMessaging.MESSAGE_TYPE_SEND_ERROR
 					.equals(messageType)) {
-				sendNotification("Send error: " + extras.toString());
+				App42Log.debug("Send error: " + extras.toString());
+				App42GCMReceiver.completeWakefulIntent(intent);
 			} else if (GoogleCloudMessaging.MESSAGE_TYPE_DELETED
 					.equals(messageType)) {
-				sendNotification("Deleted messages on server: "
+				App42Log.debug("Deleted messages on server: "
 						+ extras.toString());
+				App42GCMReceiver.completeWakefulIntent(intent);
 				// If it's a regular GCM message, do some work.
 			} else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE
 					.equals(messageType)) {
-				// This loop represents the service doing some work.
-				for (int i = 0; i < 5; i++) {
-					Log.i(TAG,
-							"Working... " + (i + 1) + "/5 @ "
-									+ SystemClock.elapsedRealtime());
-					try {
-						Thread.sleep(100);
-					} catch (InterruptedException e) {
-					}
-				}
-				Log.i(TAG, "Completed work @ " + SystemClock.elapsedRealtime());
-				// Post notification of received message.
-				Log.i(TAG, "Received: " + extras.toString());
-					String message = intent.getExtras().getString("message");
-				Log.i(TAG, "Message: " + message);
-				broadCastMessage(message);
-				sendNotification(message);
+				String message = intent.getExtras().getString("message");
+				App42Log.debug("Received: " + extras.toString());
+				App42Log.debug("Message: " + message);
+				validatePushIfRequired(message, intent);
 				
 			}
 		}
 		// Release the wake lock provided by the WakefulBroadcastReceiver.
-		App42GCMReceiver.completeWakefulIntent(intent);
+
+	}
+
+	private void showNotification(String message,Intent intent) {
+		broadCastMessage(message);
+		sendNotification(message);
+		 App42GCMReceiver.completeWakefulIntent(intent);
+	}
+
+	private void validatePushIfRequired(String message,final Intent intent) {
+		try {
+			final JSONObject json = new JSONObject(message);
+			final String geoBaseType = json.optString(App42GeoTag, null);
+			if (geoBaseType == null) {
+				showNotification(json.toString(),intent);
+			}
+			else{
+				 App42LocationManager.fetchGPSLocation(this,new App42LocationListener() {
+					
+					@Override
+					public void onLocationFetched(Location location) {
+						// TODO Auto-generated method stub
+						LocationUtils.saveLocation(location, App42GCMService.this);
+						validateGeobasePush(json, geoBaseType,intent);
+					}
+					
+					@Override
+					public void onLocationException(App42Exception e) {
+						// TODO Auto-generated method stub
+						validateGeobasePush(json, geoBaseType,intent);
+					}
+					
+					@Override
+					public void onLocationAddressRetrived(Address address) {
+						// TODO Auto-generated method stub
+						LocationUtils.saveLocationAddress(address, App42GCMService.this);
+						validateGeobasePush(json, geoBaseType,intent);
+					}
+				});
+			}
+
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			showNotification(message,intent);
+		}
+	}
+	
+	/**
+	 *  Validate GeoBase Push Notification
+	 * @param jsondata
+	 * @param geotype
+	 * @param intent
+	 */
+	private void validateGeobasePush(JSONObject jsondata,String geotype,Intent intent){
+		if(geotype.equals(CountryBase)){
+			if(LocationUtils.isCountryBaseSuccess(jsondata, this))
+				showNotification(jsondata.optString(KeyApp42Message, ""),intent);
+		}
+		else if(geotype.equals(GeoBase)){
+			if(LocationUtils.isGeoBaseSuccess(jsondata, this))
+				showNotification(jsondata.optString(KeyApp42Message, ""),intent);
+		}
 	}
 
 	// Put the message into a notification and post it.
@@ -161,4 +221,5 @@ public class App42GCMService extends IntentService {
 			return "MainActivity";
 		}
 	}
+
 }
