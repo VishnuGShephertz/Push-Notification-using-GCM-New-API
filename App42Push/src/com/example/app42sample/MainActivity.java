@@ -27,7 +27,7 @@ import com.shephertz.app42.push.plugin.App42GCMService;
  */
 public class MainActivity extends Activity implements App42GCMListener {
 	
-	private static final String GoogleProjectNo = "1043599038916";
+	private static final String GoogleProjectNo = "Your Google Project No";
 	private TextView responseTv;
 	private EditText edUserName, edMessage;
 
@@ -40,10 +40,10 @@ public class MainActivity extends Activity implements App42GCMListener {
 		edMessage = ((EditText) findViewById(R.id.message));
 		 App42API.initialize(
 		 this,
-		 "6ee926bcf52d0c373a4a439b1ed479c2a06edc32a4ecae9406eb4fd8a5d10c62",
-		 "184e83bf989ef3807914531f55453877b2b609bfcb71cafdfd44781920ad0883");
+		 "Your API Key",
+		 "Your Secret Key");
 		 App42Log.setDebug(true);
-		 App42API.setLoggedInUser("Vi") ;
+		 App42API.setLoggedInUser("Your UserName") ;
 	}
 
 	public void onStart() {
