@@ -70,11 +70,8 @@
         </receiver>
 
         <!--
-          Application-specific subclass of GCMBaseIntentService that will
+          Application-specific subclass of intentService that will
           handle received messages.
-
-          By default, it must be named .GCMIntentService, unless the
-          application uses a custom BroadcastReceiver that redefines its name.
         -->
         <service android:name="com.shephertz.app42.push.plugin.App42GCMService" >
         </service>

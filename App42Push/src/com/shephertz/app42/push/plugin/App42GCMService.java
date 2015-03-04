@@ -47,8 +47,8 @@ public class App42GCMService extends IntentService {
 	static int msgCount = 0;
 	public static final String DisplayMessageAction = "com.example.app42sample.DisplayMessage";
 	private static final String App42GeoTag = "app42_geoBase";
-	private static final String CountryBase = "countryBase";
-	private static final String GeoBase = "geoBase";
+	private static final String AddressBase = "addressBase";
+	private static final String LocationBase = "coordinateBase";
 	private static final String KeyApp42Message = "app42_message";
 
 	public App42GCMService() {
@@ -138,11 +138,11 @@ public class App42GCMService extends IntentService {
 	 * @param intent
 	 */
 	private void validateGeobasePush(JSONObject jsondata,String geotype,Intent intent){
-		if(geotype.equals(CountryBase)){
+		if(geotype.equals(AddressBase)){
 			if(LocationUtils.isCountryBaseSuccess(jsondata, this))
 				showNotification(jsondata.optString(KeyApp42Message, ""),intent);
 		}
-		else if(geotype.equals(GeoBase)){
+		else if(geotype.equals(LocationBase)){
 			if(LocationUtils.isGeoBaseSuccess(jsondata, this))
 				showNotification(jsondata.optString(KeyApp42Message, ""),intent);
 		}

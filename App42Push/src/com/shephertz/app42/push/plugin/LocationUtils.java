@@ -20,7 +20,7 @@ import android.location.Location;
  */
 public class LocationUtils {
 	private static SharedPreferences mApp42Preference = null;
-	private static final String KeyCountry = "app42_countryName";
+	private static final String KeyCountry = "app42_countryCode";
 	private static final String KeyCity = "app42_cityName";
 	private static final String KeyLat = "app42_lat";
 	private static final String KeyLong = "app42_lng";
