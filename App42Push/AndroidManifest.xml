@@ -60,8 +60,6 @@
                 <!-- Receives the actual messages. -->
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <!-- Receives the registration id. -->
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <!-- Your package name here -->
                   <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
                
                      <!-- Your package name here -->
